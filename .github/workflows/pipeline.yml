@@ -37,7 +37,7 @@ jobs:
       - name: Build Fat JAR with Gradle
         run: |
           chmod +x ./gradlew
-          ./gradlew shadowJar -Pversion=${{ env.VERSION }} --no-daemon
+          ./gradlew test shadowJar -Pversion=${{ env.VERSION }} --no-daemon
 
       - name: Upload JAR Artifact
         uses: actions/upload-artifact@v4
